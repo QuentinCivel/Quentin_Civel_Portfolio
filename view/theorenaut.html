@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Theo Renaut</title>
+    <link rel="stylesheet" href="../style/theorenaut.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="../index.html" class="logo">Dev.</a>
+            <div class="links">
+                <a href="../index.html#projets">Projets</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../CV_Quentin_CIVEL.pdf" class="btn-outline" target="_blank">Mon CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Projet Théo Renaut : Portfolio & CMS Sur-Mesure</h1>
+            <p>
+                Réalisé dans le cadre de mon stage de BTS, ce projet consistait à créer une solution web complète pour un photographe professionnel. Pour répondre à son besoin d'autonomie, j'ai développé l'application en deux parties : d'un côté, un site vitrine public fluide pour exposer ses œuvres et faciliter la prise de contact ; de l'autre, un espace d'administration privé (CMS). Ce back-office sur-mesure lui permet non seulement de gérer facilement ses galeries photos, mais intègre également un gestionnaire de tâches dédié à son activité professionnelle.
+            </p>
+        </section>
+
+        <section class="tech-stack-section">
+            <h2>Architecture & Technologies</h2>
+            <div class="tech-content">
+                <p>
+                    Pour garantir un code propre, maintenable et évolutif, j'ai conçu l'ensemble du Back-end en <strong>PHP Orienté Objet (POO)</strong> en respectant l'architecture <strong>MVC (Modèle-Vue-Contrôleur)</strong>.
+                </p>
+                
+                <ul class="tech-details-list">
+                    <li>
+                        <strong>Architecture MVC :</strong> Séparation stricte de la logique métier (Modèles), de l'interface utilisateur (Vues) et du traitement des requêtes (Contrôleurs).
+                    </li>
+                    <li>
+                        <strong>Base de données (MySQL) :</strong> Modélisation relationnelle optimisée avec requêtes préparées (PDO) pour contrer les failles par injection SQL.
+                    </li>
+                    <li>
+                        <strong>Sécurité :</strong> Hachage des mots de passe (Bcrypt), gestion sécurisée des sessions utilisateur pour le back-office, et filtrage strict lors de l'upload des images.
+                    </li>
+                    <li>
+                        <strong>Front-end :</strong> HTML5, CSS3 (design 100% responsive) et JavaScript natif pour les appels API (Fetch) de la galerie.
+                    </li>
+                    <li>
+                        <strong>Base de données (MySQL) :</strong> Modélisation relationnelle optimisée pour gérer efficacement les entités (Séries, Photos, Textes, Utilisateurs).
+                    </li>
+                    <li>
+                        <strong>Sécurité :</strong> Prévention des injections SQL (requêtes préparées PDO), protection contre les failles XSS (nettoyage systématique des entrées utilisateurs), hachage des mots de passe (Bcrypt) et validation stricte des types MIME lors des uploads.
+                    </li>
+                </ul>
+            </div>
+        </section>
+            
+        <section>
+            <h2>Site Vitrine :</h2>
+            <div class="gallery-stack">
+                
+                <div class="gallery-item">
+                    <h3>Accueil</h3>
+                    <img src="../image/accueil.webp" alt="Maquette de la page d'accueil">
+                    <p>Une page d'accueil immersive conçue pour capter l'attention dès les premières secondes. Elle intègre un carrousel d'images fluide et en plein écran, offrant un premier aperçu percutant du style et du travail du photographe.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <h3>Galerie</h3>
+                    <img src="../image/galerie.webp" alt="Maquette de la galerie photo">
+                    <p>Le cœur du site vitrine. Cette page présente les œuvres du photographe à travers un système de filtrage dynamique par séries. Les données et les images sont récupérées de manière asynchrone via une API JavaScript (fetch), garantissant une navigation fluide sans rechargement de page.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <h3>Présentation</h3>
+                    <img src="../image/présentation.webp" alt="Maquette de la page présentation">
+                    <p>Un espace dédié à la biographie et à la démarche artistique du photographe. Le design épuré, pensé pour l'accessibilité visuelle (contraste des couleurs respectant les normes WCAG), permet de mettre en valeur son parcours professionnel.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <h3>Contact</h3>
+                    <img src="../image/contact.webp" alt="Maquette de la page contact">
+                    <p>Une interface permettant aux futurs clients ou collaborateurs de joindre directement le photographe. L'intégration de la page respecte le style global du site, assurant une navigation cohérente.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <h3>Mentions légales</h3>
+                    <img src="../image/mentions_légales.webp" alt="Maquette des mentions légales">
+                    <p>Page regroupant les informations juridiques obligatoires, assurant la conformité du site avec la législation web en vigueur (hébergement, droits d'auteur des photographies).</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Site CMS</h2>
+            <div class="gallery-stack">
+                
+                <div class="gallery-item">
+                    <h3>Connexion</h3>
+                    <img src="../image/login.webp" alt="connexion">
+                    <p>La porte d'entrée sécurisée vers le panneau d'administration. L'accès est protégé par un système d'authentification PHP robuste, gérant les sessions utilisateurs et vérifiant le hachage des mots de passe en base de données pour empêcher toute intrusion.</p>
+                </div>
+                
+                <div class="gallery-item">
+                    <h3>CMS</h3>
+                    <img src="../image/cms1.webp" alt="Maquette de la page d'accueil">
+                    <img src="../image/cms2.webp" alt="Maquette de la page d'accueil">
+                    <p>L'interface d'administration sur-mesure. Développée en PHP Orienté Objet (POO), elle offre une autonomie totale (CRUD) au photographe. Il peut y créer et modifier ses séries, leur attribuer un texte de présentation unique, et y uploader ses clichés. Pour garantir la sécurité et les performances du site, le système vérifie strictement le type MIME de chaque fichier lors de l'upload, puis redessine et convertit automatiquement les images au format optimisé <strong>.webp</strong> avant de les stocker.</p>
+                </div>
+                <div class="gallery-item">
+                    <h3>To do list</h3>
+                    <img src="../image/todolist.webp" alt="Maquette de la page d'accueil">
+                    <p>Un outil de productivité intégré directement au cœur du CMS. Il permet au photographe d'organiser facilement ses tâches courantes (suivi des retouches, préparation des futurs shootings, rendez-vous clients) sans avoir à quitter son espace de travail.</p>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+    <div id="lightbox-modal" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="../script/lightbox.js"></script>
+</body>
+</html>

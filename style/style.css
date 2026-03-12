@@ -1,0 +1,79 @@
+
+:root {
+    --bg-color: #0a192f;
+    --card-bg: #112240;
+    --card-hover: #233554;
+    --text-main: #ccd6f6;
+    --text-muted: #c2c7d5;
+    --accent: #64ffda; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0; width: 100%;
+    padding: 20px 40px;
+    background: rgba(10, 25, 47, 0.85); 
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+.nav-content { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; }
+.nav-content a { color: var(--text-main); text-decoration: none; margin-left: 20px; font-size: 14px;}
+.nav-content a:hover { color: var(--accent); }
+.logo { font-weight: 800; font-size: 20px !important; color: var(--accent) !important;}
+
+/* Structure principale */
+main { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+section {  display: flex; flex-direction: column; justify-content: center; padding: 100px 0; }
+.section-title { font-size: 30px; margin-bottom: 40px; color: var(--text-main); }
+.section-title::after { content: ""; display: inline-block; width: 200px; height: 1px; background: var(--card-hover); margin-left: 20px; vertical-align: middle; }
+
+/* Boutons */
+.btn-primary, .btn-outline {
+    display: inline-block;
+    padding: 15px 30px;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover, .btn-outline:hover { background: rgba(100, 255, 218, 0.1); }
+.btn-outline { padding: 10px 15px; font-size: 13px; }
+
+/* Grille de projets (Style Javi Adrián) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+.card:hover { transform: translateY(-7px); } /* L'effet de soulèvement */
+.card-top { display: flex; justify-content: space-between; margin-bottom: 20px; }
+.card h4 { font-size: 22px; margin-bottom: 10px; color: var(--text-main);}
+.card p { color: var(--text-muted); font-size: 15px; margin-bottom: 20px; }
+.tech-list { display: flex; list-style: none; gap: 15px; font-family: monospace; font-size: 12px; color: var(--text-muted); margin-top: auto;}
+
+/* Animation d'apparition JS */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quentin Civel - Portfolio</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <a href="#accueil" class="logo">Dev.</a>
+            <div class="links">
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+                <a href="CV_Quentin_CIVEL.pdf" class="btn-outline" target="_blank">Mon CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="accueil" class="hero fade-in">
+            <p class="accent-text">Bonjour, je m'appelle</p>
+            <h1>Quentin CIVEL</h1>
+            <h2>Je suis en formation de développeur web.</h2>
+            <p class="description">
+                Suite à mon BTS, je suis à la recherche d'une <strong>alternance</strong> pour ma Licence Concepteur Développeur d'Application. 
+            </p>
+            <a href="#projets" class="btn-primary">Voir mon travail</a>
+        </section>
+
+        <section id="projets" class="fade-in">
+            <h3 class="section-title">Mes projets</h3>
+            <div class="project-grid">
+                
+                <article class="card">
+                    <div class="card-content">
+                        <header>
+                            <div class="card-top">
+                                <span class="folder-icon">📁</span>
+                                <div class="links">
+                                    <a href="view/theorenaut.html" target="_blank">Live</a>
+                                </div>
+                            </div>
+                            <h4>Site dynamique </h4>
+                            <p>Site web dynamique avec un CMS intégré pour un photographe profossionnel lui permettant de modifier son site sans coder. Projet créer dans le cadre de mon stage en BTS.</p>
+                        </header>
+                        <footer>
+                            <ul class="tech-list">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                            </ul>
+                        </footer>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-content">
+                        <header>
+                            <div class="card-top">
+                                <span class="folder-icon">📁</span>
+                                <div class="links">
+                                    <a href="https://github.com/QuentinCivel/Task.git"target="_blank">GitHub</a>
+                                    <a href="https://projettask.alwaysdata.net/" target="_blank">Live</a>
+                                </div>
+                            </div>
+                            <h4>Projet task</h4>
+                            <p>Création d'une intérface permettant à l'utilisateur de lister ces tâches.</p>
+                        </header>
+                        <footer>
+                            <ul class="tech-list">
+                                <li>HTML/CSS</li>
+                                <li>PHP</li>
+                            </ul>
+                        </footer>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h3 class="section-title">Me contacter</h3>
+            <p>Mon profil correspond à vos recherches pour une alternant ? N'hésitez pas à m'envoyer un message, je serais ravi d'en discuter !</p>
+            <a href="mailto:q.civel@yahoo.fr" class="btn-primary">Me contacter</a>
+        </section>
+    </main>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
