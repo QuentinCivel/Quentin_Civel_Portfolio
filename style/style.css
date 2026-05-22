@@ -78,6 +78,72 @@ section {  display: flex; flex-direction: column; justify-content: center; paddi
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+
+/* --- SECTION PROFIL & COMPÉTENCES --- */
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Le texte prend 40% de la largeur sur grand écran */
+.about-text {
+    flex: 1 1 400px;
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    color: var(--text-main);
+}
+
+/* Les compétences prennent le reste de la place */
+.skills-wrapper {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skill-category h4 {
+    color: var(--text-main);
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--card-hover);
+    padding-bottom: 10px;
+}
+
+/* Le conteneur des petits badges */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Le design du badge (tag) */
+.tags span {
+    background-color: var(--card-bg);
+    color: var(--accent);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-family: monospace; /* Donne un côté très "codeur" */
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tags span:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
 /* --- FORMULAIRE DE CONTACT --- */
 
 .contact-form {
@@ -141,4 +207,81 @@ section {  display: flex; flex-direction: column; justify-content: center; paddi
     font-family: inherit;
     font-size: 15px;
     margin-top: 10px;
+}
+
+/* --- MENTION RGPD --- */
+.rgpd-checkbox {
+    display: flex;
+    align-items: flex-start; /* Aligne la case en haut si le texte prend plusieurs lignes */
+    gap: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* On s'assure que la case à cocher garde sa taille normale */
+.rgpd-checkbox input[type="checkbox"] {
+    width: auto;
+    margin-top: 4px; /* Descend un peu la case pour l'aligner avec le texte */
+    cursor: pointer;
+}
+
+/* Le texte légal en petit et grisé */
+.rgpd-checkbox label {
+    font-size: 12px; /* Plus petit que les autres labels */
+    color: var(--text-muted);
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+/* --- FOOTER --- */
+
+footer {
+    background-color: var(--card-bg); /* Utilise le bleu marine de tes cartes */
+    padding: 30px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Séparation subtile */
+    margin-top: 80px; /* Espace pour respirer après la dernière section */
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-family: monospace; /* Un petit clin d'œil dev pour le texte */
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+/* Style des liens contenant les icônes */
+.social-links a {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Style spécifique des icônes SVG */
+.social-links svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; /* Permet au SVG de prendre la couleur du lien (color) */
+}
+
+/* Effet au survol */
+.social-links a:hover {
+    color: var(--accent); /* Devient cyan */
+    transform: translateY(-4px); /* Petit bond vers le haut */
 }
