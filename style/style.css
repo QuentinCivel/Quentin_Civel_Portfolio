@@ -77,3 +77,68 @@ section {  display: flex; flex-direction: column; justify-content: center; paddi
 /* Animation d'apparition JS */
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* --- FORMULAIRE DE CONTACT --- */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px; /* Empêche le formulaire d'être trop large sur un grand écran */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espace entre le label et l'input */
+}
+
+.contact-form label {
+    color: var(--text-main);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Style des champs de saisie */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--card-bg); /* Fond bleu marine */
+    border: 1px solid var(--card-hover); /* Bordure discrète */
+    border-radius: 4px;
+    color: var(--text-main);
+    font-size: 16px;
+    outline: none; /* Enlève la bordure bleue par défaut du navigateur */
+    transition: all 0.3s ease;
+}
+
+/* Hauteur spécifique pour la zone de message */
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical; /* Permet à l'utilisateur de l'agrandir uniquement de haut en bas */
+}
+
+/* Le texte temporaire (placeholder) */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+/* L'état au clic (Focus) - Essentiel pour une bonne UX */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent); /* La bordure devient cyan */
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.1); /* Léger halo lumineux */
+}
+
+/* Adaptation du bouton pour le formulaire */
+.contact-form button {
+    align-self: flex-start; /* Empêche le bouton de prendre toute la largeur */
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 15px;
+    margin-top: 10px;
+}
