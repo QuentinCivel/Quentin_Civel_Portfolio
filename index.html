@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quentin Civel - Portfolio</title>
+    
+    <title>Quentin Civel | Portfolio - Développeur Web</title>
+    <meta name="description" content="Portfolio de Quentin Civel, développeur web à la recherche d'une alternance pour une Licence Concepteur Développeur d'Application. Découvrez mes projets PHP, JavaScript et web design.">
+    <meta name="keywords" content="Quentin Civel, Développeur Web, Alternance, Licence CDA, Portfolio, PHP, JavaScript, Développeur Front-end, Développeur Back-end">
+    <meta name="author" content="Quentin Civel">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quentincivelportfolio.netlify.app/">
+    <meta property="og:title" content="Quentin Civel | Portfolio - Développeur Web">
+    <meta property="og:description" content="Développeur web en recherche d'alternance. Découvrez mes projets et mon parcours.">
+    <meta property="og:image" content="https://ton-vrai-nom-de-domaine.fr/image/apercu-portfolio.jpg">
+    <meta property="og:site_name" content="Portfolio de Quentin Civel">
+
     <link rel="stylesheet" href="style/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 <body>
 
@@ -78,14 +93,33 @@
                         </footer>
                     </div>
                 </article>
-
             </div>
         </section>
 
         <section id="contact" class="fade-in">
             <h3 class="section-title">Me contacter</h3>
-            <p>Mon profil correspond à vos recherches pour une alternant ? N'hésitez pas à m'envoyer un message, je serais ravi d'en discuter !</p>
-            <a href="mailto:q.civel@yahoo.fr" class="btn-primary">Me contacter</a>
+            <p style="margin-bottom: 30px;">Mon profil correspond à vos recherches pour un alternant ? N'hésitez pas à m'envoyer un message via ce formulaire ou directement à <a href="mailto:q.civel@yahoo.fr" class="accent-text" style="text-decoration: none;">q.civel@yahoo.fr</a>, je serais ravi d'en discuter !</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="85352885-3dbf-46f5-b0fd-d59f7d69a5ac">
+                
+                <div class="form-group">
+                    <label for="name">Votre nom :</label>
+                    <input type="text" name="name" id="name" required placeholder="Nom">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Votre email :</label>
+                    <input type="email" name="email" id="email" required placeholder="Email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Votre message :</label>
+                    <textarea name="message" id="message" required placeholder="Bonjour, votre profil nous intéresse..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary">Envoyer le message</button>
+            </form>
         </section>
     </main>
 
