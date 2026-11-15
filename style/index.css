@@ -8,4 +8,4 @@ h2 { font-size: clamp(30px, 6vw, 60px); color: var(--text-muted); line-height: 1
 .description { color: var(--text-muted); max-width: 500px; margin-bottom: 50px; }
 
 
-section { min-height: 100vh; }
+section { min-height: auto; }
